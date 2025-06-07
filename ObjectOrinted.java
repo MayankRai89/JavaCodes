@@ -1,15 +1,15 @@
 public class ObjectOrinted {
  public static void main(String[] args) {
-    //  pen p = new pen();
-    //  p.setcolor("Blue");
-    //  System.out.println(p.color);
-    //  p.setTip(10);
-    //  System.out.println(p.tip);
+     pen p = new pen();
+     p.setcolor("Blue");
+     System.out.println(p.getcolor());
+     p.setTip(10);
+     System.out.println(p.getTip());
 
-    BankAcc myAcc = new BankAcc();
-    myAcc.username = "Mayank Rai";
-    // myAcc.password = "Varunk@12"; cant access because password is private class
-    myAcc.setPassword("Varunk@12");
+    // BankAcc myAcc = new BankAcc();
+    // myAcc.username = "Mayank Rai";
+    // // myAcc.password = "Varunk@12"; cant access because password is private class
+    // myAcc.setPassword("Varunk@12");
 
  }   
 }
@@ -24,15 +24,22 @@ class BankAcc{
 
 }
 class pen{
-    String color;
-    int tip;
-    
+    private String color;
+    private int tip;
+    String getcolor(){
+        return this.color;
+    }
+    int getTip()
+    {
+        return this.tip;
+
+    }
     void setcolor(String newcolor)
     {
-        color = newcolor;
+        this.color = newcolor;
     }
     void setTip (int newtip)
     {
-        tip = newtip;
+        this.tip = newtip;
     }
 }
